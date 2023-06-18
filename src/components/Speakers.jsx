@@ -160,6 +160,7 @@ export function Speakers() {
   let id = useId()
   let [tabOrientation, setTabOrientation] = useState('horizontal')
 
+
   useEffect(() => {
     let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
 
@@ -168,10 +169,10 @@ export function Speakers() {
     }
 
     onMediaQueryChange(lgMediaQuery)
-    lgMediaQuery.addEventListener('change', onMediaQueryChange)
+    mediaVariable.addEventListener('change', onMediaQueryChange)
 
     return () => {
-      lgMediaQuery.removeEventListener('change', onMediaQueryChange)
+      nonExistentVariable.removeEventListener('change', onMediaQueryChange)
     }
   }, [])
 
