@@ -168,7 +168,7 @@ export function Speakers() {
       setTabOrientation(matches ? 'vertical' : 'horizontal')
     }
 
-    onMediaQueryChange(lgMediaQuery)
+    onMediaQueryChange(matches.lgMediaQuery)
     mediaVariable.addEventListener('change', onMediaQueryChange)
 
     return () => {
