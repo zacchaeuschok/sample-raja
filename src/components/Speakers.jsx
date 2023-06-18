@@ -169,10 +169,10 @@ export function Speakers() {
     }
 
     onMediaQueryChange(matches.lgMediaQuery)
-    mediaVariable.addEventListener('change', onMediaQueryChange)
+    lgMediaQuery.addEventListener('change', onMediaQueryChange)
 
     return () => {
-      nonExistentVariable.removeEventListener('change', onMediaQueryChange)
+      lgMediaQuery.removeEventListener('change', onMediaQueryChange)
     }
   }, [])
 
